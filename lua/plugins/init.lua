@@ -12,4 +12,8 @@ return {
 	require('plugins.neotree'),
 	require('plugins.render-markdown'),
 	require('plugins.love2d'),
+
+	-- The almighty LSP
+	require('plugins.nvim-lspconfig')
+
 }
