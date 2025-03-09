@@ -3,15 +3,16 @@ return {
 	"folke/which-key.nvim",
 	"rcarriga/nvim-notify",
 	{ 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-	require('plugins.tokyonight'), -- colorscheme
-	require('plugins.telescope'),
-	require('plugins.git-signs'),
-	require('plugins.mini'),
-	require('plugins.treesitter'),
 	require('plugins.autopair'),
-	require('plugins.neotree'),
-	require('plugins.render-markdown'),
+	require('plugins.dressing'),
+	require('plugins.git-signs'),
 	require('plugins.love2d'),
+	require('plugins.mini'),
+	require('plugins.neotree'),
+	require('plugins.telescope'),
+	require('plugins.tokyonight'), -- colorscheme
+	require('plugins.treesitter'),
+	require('plugins.render-markdown'),
 
 	-- The almighty LSP
 	require('plugins.nvim-lspconfig')
