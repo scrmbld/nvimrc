@@ -16,12 +16,7 @@ return {
 				return 'make installjsregep'
 			end)(),
 			dependencies = {
-				{
-					'rafamadriz/friendly-snippets',
-					config = function()
-						require('luasnip.loaders.from_vscode').lazy_load()
-					end,
-				},
+				-- add snippets here
 			}
 		},
 		-- make LuaSnip available to nvim-cmp
