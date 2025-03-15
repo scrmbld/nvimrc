@@ -23,7 +23,7 @@ return {
 				vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = "[G]oto [D]eclaration" })
 				vim.keymap.set('n', 'gI', vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
 				vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = "[G]oto [R]eferences" })
-				vim.keymap.set('n', 'rn', vim.lsp.buf.rename, { desc = "Rename" })
+				vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = "Rename" })
 
 				vim.keymap.set('n', '<leader>T', require('telescope.builtin').lsp_type_definitions,
 					{ desc = "Goto type definition" })
@@ -60,6 +60,7 @@ return {
 		capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 		local servers = {
+			ts_ls = {},
 			gopls = {},
 			pyright = {},
 			clangd = {},
