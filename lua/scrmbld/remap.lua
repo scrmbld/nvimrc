@@ -1,6 +1,7 @@
 -- non plugin specific keymaps
 
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- navigate quickfix lists
 vim.keymap.set('n', 'Qj', '<cmd>cnext<CR>zz')
@@ -42,7 +43,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
 -- open diagnostic in floating buffer
-vim.keymap.set('n', '<leader>df', '<cmd> lua vim.diagnostic.open_float() <CR>', { desc = 'Open floating diagnostic'})
+vim.keymap.set('n', '<leader>df', '<cmd> lua vim.diagnostic.open_float() <CR>', { desc = 'Open floating diagnostic' })
 
 -- make the current file executable
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
@@ -63,4 +64,3 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     end)
   end,
 })
-

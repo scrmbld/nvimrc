@@ -13,6 +13,7 @@ return {
 	require('plugins.tokyonight'), -- colorscheme
 	require('plugins.treesitter'),
 	require('plugins.render-markdown'),
+	require('plugins.vimtex'),
 
 	-- The almighty LSP
 	require('plugins.nvim-lspconfig')
