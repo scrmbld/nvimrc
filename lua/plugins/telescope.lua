@@ -4,10 +4,4 @@ return {
 	event = 'VimEnter',
 	dependencies = { 'nvim-lua/plenary.nvim' },
 
-	extensions = {
-		['ui-select'] = {
-			require('telescope.themes').get_dropdown()
-		}
-	}
-
 }
