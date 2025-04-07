@@ -61,6 +61,7 @@ return {
 
 		local servers = {
 			ts_ls = {},
+			emmet_ls = {},
 			gopls = {},
 			pyright = {},
 			clangd = {},
