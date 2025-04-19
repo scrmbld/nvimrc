@@ -61,8 +61,11 @@ return {
 
 		local servers = {
 			ts_ls = {},
-			emmet_ls = {},
+			emmet_ls = {
+				filetypes = { "html", "templ" }
+			},
 			gopls = {},
+			templ = {},
 			pyright = {},
 			clangd = {},
 			lua_ls = {

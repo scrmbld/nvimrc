@@ -29,6 +29,10 @@ vim.keymap.set('n', '<leader>dv', '\"_d')
 vim.keymap.set('v', '<leader>dv', '\"_d')
 vim.keymap.set('n', '<leader>Dv', '\"_D')
 
+-- x and X do not go into ""
+vim.keymap.set('n', 'x', '\"_x')
+vim.keymap.set('n', 'X', '\"_X')
+
 -- pull text around in visual mode
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv')
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv')
@@ -61,6 +65,21 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
         -- replace with the matched string from ^ to the last non-space character, followed by two spaced and \r
         vim.cmd 'silent %s/\\v^(\\s*.*[^ ]+)([ ]{0,1})\\n/\\1  \r/e'
       end)
+    end)
+  end,
+})
+
+-- add keybinds to start & sync jupyter notebook when opening a .ju.py file
+-- <leader>ja start and attach
+-- <leader>ji sync
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = { '*.ju.*' },
+  callback = function()
+    vim.schedule(function()
+      vim.keymap.set('n', '<leader>ja', vim.cmd.JupyniumStartAndAttachToServer,
+        { desc = 'Start jupyter server', buffer = true })
+      vim.keymap.set('n', '<leader>ji', vim.cmd.JupyniumStartSync,
+        { desc = 'Sync buffer to jupyter browser', buffer = true })
     end)
   end,
 })
