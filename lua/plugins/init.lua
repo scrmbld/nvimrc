@@ -2,6 +2,7 @@ return {
 	"tpope/vim-sleuth",
 	"folke/which-key.nvim",
 	"rcarriga/nvim-notify",
+	"mbbill/undotree",
 	{ 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 	require('plugins.autopair'),
 	require('plugins.dressing'),

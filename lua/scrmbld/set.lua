@@ -5,6 +5,7 @@ vim.opt.relativenumber = true
 vim.opt.showmode = false
 
 vim.opt.tabstop = 4
+vim.opt.expandtab = true
 vim.opt.shiftwidth = 0
 
 vim.opt.ignorecase = true
@@ -35,4 +36,3 @@ vim.opt.scrolloff = 6
 
 vim.opt.undodir = vim.fn.stdpath("data") .. '/undodir'
 vim.opt.undofile = true
-
