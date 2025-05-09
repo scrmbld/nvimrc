@@ -31,6 +31,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 vim.opt.cursorline = true
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 vim.opt.scrolloff = 6
 
