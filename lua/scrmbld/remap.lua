@@ -3,10 +3,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- navigate quickfix lists
-vim.keymap.set('n', 'Qj', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', 'Qk', '<cmd>cprev<CR>zz')
-
 -- open netrw
 vim.keymap.set('n', '<leader>fe', vim.cmd.Ex)
 
