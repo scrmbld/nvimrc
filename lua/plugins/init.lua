@@ -1,5 +1,4 @@
 return {
-	"tpope/vim-sleuth",
 	"folke/which-key.nvim",
 	"rcarriga/nvim-notify",
 	"mbbill/undotree",
