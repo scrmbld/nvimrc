@@ -1,3 +1,10 @@
+-- add Oz filetype
+vim.filetype.add({
+  extension = {
+    oz = 'oz'
+  }
+})
+
 vim.g.have_nerd_font = true
 
 vim.opt.number = true
