@@ -91,7 +91,9 @@ return {
 		vim.list_extend(ensure_installed, {
 			"stylua", -- also automatically install sylua
 		})
-		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+        -- Just because we have a configuration for an LSP does not mean we want to install it
+		-- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 		require("mason-lspconfig").setup({
 			handlers = {
