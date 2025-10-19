@@ -1,8 +1,15 @@
 -- add Oz filetype
 vim.filetype.add({
-  extension = {
-    oz = 'oz'
-  }
+    extension = {
+        oz = 'oz'
+    }
+})
+
+-- add razor filetype
+vim.filetype.add({
+    extension = {
+        razor = 'razor'
+    }
 })
 
 vim.g.have_nerd_font = true
