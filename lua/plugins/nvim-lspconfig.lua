@@ -63,6 +63,7 @@ return {
         capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
         local servers = {
+            csharp_ls = {},
             ts_ls = {},
             emmet_ls = {
                 filetypes = { "html", "templ", "htmldjango", "razor" },
