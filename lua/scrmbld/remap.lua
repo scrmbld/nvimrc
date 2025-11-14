@@ -51,31 +51,31 @@ vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 -- add double spaces before all newlines in markdown files
 -- <leader>mf
 vim.api.nvim_create_autocmd({ 'BufEnter' }, {
-  pattern = { '*.markdown', '*.mdown', '*.mkd', '*.mkdn', '*.mdwn', '*.md' },
-  callback = function()
-    vim.schedule(function()
-      vim.keymap.set('n', '<leader>mf', function()
-        -- match strings that begin at ^ and end with newline
-        -- match strings that contain at least one non-space character
-        -- match strings that do not end with two spaces
-        -- replace with the matched string from ^ to the last non-space character, followed by two spaced and \r
-        vim.cmd 'silent %s/\\v^(\\s*.*[^ ]+)([ ]{0,1})\\n/\\1  \r/e'
-      end)
-    end)
-  end,
+    pattern = { '*.markdown', '*.mdown', '*.mkd', '*.mkdn', '*.mdwn', '*.md' },
+    callback = function()
+        vim.schedule(function()
+            vim.keymap.set('n', '<leader>mf', function()
+                -- match strings that begin at ^ and end with newline
+                -- match strings that contain at least one non-space character
+                -- match strings that do not end with two spaces
+                -- replace with the matched string from ^ to the last non-space character, followed by two spaced and \r
+                vim.cmd 'silent %s/\\v^(\\s*.*[^ ]+)([ ]{0,1})\\n/\\1  \r/e'
+            end)
+        end)
+    end,
 })
 
 -- add keybinds to start & sync jupyter notebook when opening a .ju.py file
 -- <leader>ja start and attach
 -- <leader>ji sync
 vim.api.nvim_create_autocmd('BufEnter', {
-  pattern = { '*.ju.*' },
-  callback = function()
-    vim.schedule(function()
-      vim.keymap.set('n', '<leader>ja', vim.cmd.JupyniumStartAndAttachToServer,
-        { desc = 'Start jupyter server', buffer = true })
-      vim.keymap.set('n', '<leader>ji', vim.cmd.JupyniumStartSync,
-        { desc = 'Sync buffer to jupyter browser', buffer = true })
-    end)
-  end,
+    pattern = { '*.ju.*' },
+    callback = function()
+        vim.schedule(function()
+            vim.keymap.set('n', '<leader>ja', vim.cmd.JupyniumStartAndAttachToServer,
+                { desc = 'Start jupyter server', buffer = true })
+            vim.keymap.set('n', '<leader>ji', vim.cmd.JupyniumStartSync,
+                { desc = 'Sync buffer to jupyter browser', buffer = true })
+        end)
+    end,
 })
