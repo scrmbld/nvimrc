@@ -24,3 +24,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- don't insert comment characters on line wrap, insert mode enter, or normal mode o
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = { '*' },
+  callback = function()
+    vim.cmd('set formatoptions-=cro')
+    vim.cmd('setlocal formatoptions-=cro')
+  end
+})
