@@ -1,4 +1,5 @@
 -- Includes all autocommands that exist for purposes other than creating keymaps
+-- For filetype settings, see ../../ftplugin
 
 -- jump to previous edit position on file open
 vim.api.nvim_create_autocmd('BufReadPost', {
