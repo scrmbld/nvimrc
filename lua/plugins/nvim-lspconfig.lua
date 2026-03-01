@@ -86,6 +86,9 @@ return {
       hls = {
         autoformat = false
       },
+      dart = {
+        cmd = { 'dart', 'language-server' }
+      },
     }
 
     vim.lsp.config('*', { capabilities = capabilities })
