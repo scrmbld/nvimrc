@@ -42,5 +42,26 @@ return {
         end,
       },
     }
+
+    dap.adapters.hdb = {
+      type = 'server',
+      port = 10025,
+
+      executable = {
+        command = 'hdb',
+        args = { 'server', '-p', '10025' }
+      }
+    }
+
+    dap.configurations.haskell = {
+      {
+        type = "hdb",
+        request = "launch",
+        name = "Launch haskell program",
+        program = '${file}',
+        console = "integratedTerminal",
+        entryFile = '${file}'
+      }
+    }
   end
 }
