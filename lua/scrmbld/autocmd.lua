@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- don't insert comment characters on line wrap, insert mode enter, or normal mode o
+-- don't insert comment characters on line wrap, insert mode enter, or normal mode o/O
 vim.api.nvim_create_autocmd('BufEnter', {
   pattern = { '*' },
   callback = function()

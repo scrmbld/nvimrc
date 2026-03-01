@@ -66,7 +66,7 @@ return {
       csharp_ls = {},
       ts_ls = {},
       emmet_ls = {
-        filetypes = { "html", "templ", "htmldjango", "razor" },
+        filetypes = { "html", "templ", "htmldjango", "razor", "xml" },
       },
       gopls = {},
       templ = {},
@@ -83,7 +83,9 @@ return {
           },
         },
       },
-      hls = {},
+      hls = {
+        autoformat = false
+      },
     }
 
     vim.lsp.config('*', { capabilities = capabilities })
