@@ -12,6 +12,7 @@ return {
   require('plugins.mini'),
   require('plugins.neotree'),
   require('plugins.nvim-dap'),
+  require('plugins.nvim-dap-view'),
   require('plugins.telescope'),
   require('plugins.tokyonight'), -- colorscheme
   require('plugins.treesitter'),

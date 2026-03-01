@@ -3,7 +3,7 @@ return {
   config = function()
     local dap = require('dap')
 
-    -- set up adapter
+    -- Go
     dap.adapters.delve = {
       type = 'server',
       port = 10025,
@@ -19,10 +19,13 @@ return {
         type = 'delve',
         request = 'launch',
         name = 'Launch go program',
-        program = '${file}'
+        program = '${file}',
+        outputMode = "remote",
+        console = "integratedTerminal"
       }
     }
 
+    -- C#
     dap.adapters.coreclr = {
       type = 'executable',
       command = '/home/cynthia/.local/bin/netcoredbg',

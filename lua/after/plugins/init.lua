@@ -1,4 +1,5 @@
-require('after.plugins.telescope')
 require('after.plugins.conform')
-require('after.plugins.undotree')
+require('after.plugins.nvim-dap')
 require('after.plugins.treesitter')
+require('after.plugins.telescope')
+require('after.plugins.undotree')
